@@ -1,0 +1,28 @@
+﻿@using System.Web.Optimization
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Home";
+}
+
+@model eUseControl.Web.Models.UserData
+
+    <div class="table-form">
+        <h1>Alege produse Top Infinity - alege calitate înaltă</h1>
+        <div class="table">
+            <table class="table table-bordered">
+                <tbody>
+                    @using (Html.BeginForm("Products", "Home", FormMethod.Post, new { autocomplete = "off" }))
+                    {
+                        foreach (var prod in Model.Products)
+                        {
+                            <tr>
+                                <td><button type="button" class="product-button">@prod</button></td>
+                                
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>

@@ -1,0 +1,312 @@
+body {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+
+	font-size: 15px;
+	line-height: 1.6;
+	color: #333;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+/* Container */
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Intro */
+.intro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	width: 100%;
+	height: 100vh;
+
+	
+	background: url("../images/intro3.jpg") center no-repeat;
+	-webkit-background-size: cover;
+	background-position: : center;
+	background-attachment: fixed;: 
+}
+
+.intro__inner {
+	width: 100%;
+	max-width: 880px;
+	margin: 0 auto;
+
+	text-align: center;
+}
+
+.intro__title {
+	color: #804000;
+	font-size: 100px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 1.0;
+}
+
+.intro__title:after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 3px;
+	margin: 60px auto;
+
+	background-color: #804000;
+}
+
+.intro__subtitle {
+	margin-bottom: 15px;
+	font-size: 72px;
+	color: #804000;
+	font-family: 'Kaushan Script', cursive;
+	text-align: center;
+}
+
+/* Header */
+.header {
+	background-color: #e6e6e6;
+	width: 100%;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	height: 75px;
+
+}
+
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo {
+	width: 20%;
+	height: 10vh;
+
+
+	background: url("../images/TopInfLogo.jpg") center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;	
+}
+
+/* Nav */
+.nav {
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.nav__link {
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px;
+	position: relative;
+
+	color: #993d00;
+	text-decoration: none;
+
+	transition: color 0.1s linear;
+}
+
+.nav__link:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+
+	background-color: #000000;
+	opacity: 0;
+
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1;
+
+	transition: opacity 0.1s linear;
+}
+
+.nav__link:hover {
+	text-decoration: none;
+	color: #000000;
+}
+
+.nav__link:hover:after {
+	opacity: 1;
+}
+
+.nav__link__border {
+	line-height: 2;
+	display: inline-block;
+	vertical-align: top;
+	padding: 6px 15px;
+	
+	border: 3px solid #804000;
+	
+	font-size: 14px;
+	font-weight: 700;
+	color: #804000;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.nav__link__border:hover {
+	background-color: #fff;
+	text-decoration: none;
+	color: #804000;
+}
+
+/* Button */
+.btn-creare {
+	display: inline-block;
+	vertical-align: top;
+	padding: 6px 15px;
+
+	border: 3px solid #804000;
+	
+	font-size: 14px;
+	font-weight: 700;
+	color: #804000;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.btn-creare:hover {
+	background-color: #fff;
+	text-decoration: none;
+	color: #804000;
+}
+
+/*  Slider */
+.slider {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.slider__inner {
+	display: flex;
+	justify-content: space-between;
+}
+
+.slider__item {
+	width: 25%;
+	padding: 20px 0;
+	border-top: 3px solid #804000;
+	opacity: 0.7;
+	font-size: 18px;
+	color: #804000;
+}
+
+.slider__num {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+/* Sign-up form */
+.sign-up-form {
+	width: 300px;
+	box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+	background: #e6e6e6;
+	padding: 20px;
+	margin: auto;
+	margin-top: 7%;
+	text-align: center;
+}
+
+.sign-up-form h1 {
+	color: #b34700;
+	margin-bottom: 30px;
+}
+
+.input-box {
+	border-radius: 20px;
+	padding: 10px;
+	margin: 10px 0;
+	width: 100%;
+	border: 2px solid #999;
+	outline: none;
+}
+
+.signup-btn {
+	background-color: #ea9e4a;
+	width: 100%;
+	padding: 10px;
+	border-radius: 20px;
+	font-size: 15px;
+	margin: 10px 0;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+hr {
+	margin-top: 20px;
+	width: 80%;
+}
+
+.or {
+	background-color: #e6e6e6;
+	width: 30px;
+	margin: -19px auto 10px;
+}
+
+img {
+	width: 70px;
+}
+
+/* Registration form */
+.registration-form {
+	width: 300px;
+	box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+	background: #e6e6e6;
+	padding: 20px;
+	margin: auto;
+	margin-top: 5.5%;
+	text-align: center;
+}
+
+.registration-form h1 {
+	color: #b34700;
+	margin-bottom: 30px;
+}
+
+/*table-form from PRODUCTS*/
+.table-form {
+	background: #e6e6e6;
+	margin-top: 0px;
+	margin-left: 200px;
+	margin-right: 200px;
+	padding: 20px;
+}
+
+.table-form h1 {
+	text-align: center;
+	color: #b34700;
+	margin-bottom: 30px;
+}
+
+.product-button{
+	background-color: #ea9e4a;
+	width: 100%;
+	padding: 10px;
+	border-radius: 20px;
+	font-size: 15px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}

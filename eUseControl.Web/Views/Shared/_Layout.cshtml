@@ -1,0 +1,57 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <title>Top Infinity</title>
+
+    @Styles.Render("~/bundles/bootstrap/css")
+    @Styles.Render("~/bundles/Assets/css-style/style")
+    
+
+
+
+</head>
+
+
+<body>
+    <div class="wraper">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__logo"></div>
+
+                    <nav class="nav">
+                        <a class="nav__link" href="@Url.Action("Index","Home")">Home</a>
+                        <a class="nav__link" href="@Url.Action("About","Home")">About</a>
+                        <a class="nav__link" href="@Url.Action("Products","Home")">Products</a>
+                        <a class="nav__link" href="@Url.Action("Contacts","Home")">Contacts</a>
+                        <a class="nav__link__border" href="@Url.Action("SignUp","Home")">Sign-up</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    </div>
+
+
+    <div class="intro">
+        @RenderBody()
+    </div>
+
+    <!-- Section for main scripts render -->
+    @Scripts.Render("~/bundles/jquery/js")
+    @Scripts.Render("~/bundles/bootstrap/js")
+  
+
+
+
+
+
+
+</body>
+    
+</html>
