@@ -3,17 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Top_Infinity.BusinessLogic.Core;
 using Top_Infinity.BusinessLogic.Interfaces;
-using Top_Infinity.Domain.Entities.User;
 
 namespace Top_Infinity.BusinessLogic
 {
-    class SessionBL: UserApi, ISession
+    public class MyBusinessLogic
     {
-        public ULoginResp UserLogin(ULoginData data)
+        public ISession GetSessionBL()
         {
-            return new ULoginResp();
+            return new SessionBL();
         }
     }
 }

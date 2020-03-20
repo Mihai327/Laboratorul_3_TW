@@ -1,34 +1,35 @@
-﻿using System.Web.Optimization;
+﻿using System.Web;
+using System.Web.Optimization;
 
-namespace eUseControl.Web 
+namespace Top_Infinity
 {
-    public static class BundleConfig
+    public class BundleConfig
     {
-        private static object bundle;
-
+        // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            // Bootstrap style
-            bundles.Add(new StyleBundle("~/bundles/bootstrap/css").Include("~/Content/bootstrap.min.css", new CssRewriteUrlTransform()));
+            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+                        "~/Scripts/jquery-{version}.js"));
 
-            // main Style css
-            bundles.Add(new StyleBundle("~/bundles/Assets/css-style/style").Include("~/Assets/css-style/style.css", new CssRewriteUrlTransform()));
+            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
+                        "~/Scripts/jquery.validate*"));
 
-            // Bootstrap
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap/js").Include("~/Scripts/bootstrap.min.js"));
+            // Use the development version of Modernizr to develop with and learn from. Then, when you're
+            // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
+            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
+                        "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jquery/js").Include("~/Scripts/jquery-3.4.1.min.js"));
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                      "~/Scripts/bootstrap.js"));
 
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/bootstrap-spacelab.css",
+                      "~/Content/site.css"));
             // Font Awesome icons style
             bundles.Add(new StyleBundle("~/bundles/font-awesome/css").Include("~/Content/font-awesome.min.css", new CssRewriteUrlTransform()));
 
-            // Toaster
-            bundles.Add(new StyleBundle("~/bundles/toaster/css").Include("~/Vendors/toastr/toastr.min.css", new CssRewriteUrlTransform()));
-
-            // DataTables
-            bundles.Add(new StyleBundle("~/bundles/datatables/css").Include("~/Vendors/datatables/datatables.min.css", new CssRewriteUrlTransform()));
-
-         
+            // Own css-style
+            bundles.Add(new StyleBundle("~/bundles/Assets/css-style/own_css_style").Include("~/Assets/css-style/own_css_style.css", new CssRewriteUrlTransform()));
         }
     }
 }

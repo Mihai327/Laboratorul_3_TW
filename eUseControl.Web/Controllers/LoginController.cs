@@ -1,48 +1,47 @@
-﻿using eUseControl.BusinessLogic;
-using eUseControl.BusinessLogic.Interfaces;
-using eUseControl.Domain.Entities.User;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Top_Infinity.BusinessLogic;
+using Top_Infinity.BusinessLogic.Interfaces;
+using Top_Infinity.Domain.Entities.User;
+using Top_Infinity.Models;
 
-namespace eUseControl.Web.Controllers
+namespace Top_Infinity.Controllers
 {
     public class LoginController : Controller
     {
         private readonly ISession _session;
         public LoginController()
         {
-            var bl = new BussinesLogic();
+            var bl = new MyBusinessLogic();
             _session = bl.GetSessionBL();
         }
-
         // GET: Login
         public ActionResult Index()
         {
             return View();
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Index(UserLogin login)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 ULoginData data = new ULoginData
                 {
-                    Credential = login.Credential,
+                    Email = login.Email,
                     Password = login.Password,
                     LoginIp = Request.UserHostAddress,
                     LoginDateTime = DateTime.Now
                 };
 
                 var userLogin = _session.UserLogin(data);
-                if(userLogin.Status)
+                if (userLogin.Status)
                 {
                     //ADD COOKIE
-                    return RdirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {
@@ -52,11 +51,10 @@ namespace eUseControl.Web.Controllers
             }
             return View();
         }
-    }
+        public ActionResult LogIn()
+        {
 
-    public class UserLogin
-    {
-        internal string Credential;
-        internal string Password;
+            return View();
+        }
     }
 }

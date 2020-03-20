@@ -2,56 +2,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <title>Top Infinity</title>
-
-    @Styles.Render("~/bundles/bootstrap/css")
-    @Styles.Render("~/bundles/Assets/css-style/style")
-    
-
-
-
+    <title>@ViewBag.Title - Top infinity</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/bundles/Assets/css-style/own_css_style")
+    @Scripts.Render("~/bundles/modernizr")
 </head>
-
-
 <body>
-    <div class="wraper">
-        <!-- Header -->
-        <header class="header">
-            <div class="container">
-                <div class="header__inner">
-                    <div class="header__logo"></div>
-
-                    <nav class="nav">
-                        <a class="nav__link" href="@Url.Action("Index","Home")">Home</a>
-                        <a class="nav__link" href="@Url.Action("About","Home")">About</a>
-                        <a class="nav__link" href="@Url.Action("Products","Home")">Products</a>
-                        <a class="nav__link" href="@Url.Action("Contacts","Home")">Contacts</a>
-                        <a class="nav__link__border" href="@Url.Action("SignUp","Home")">Sign-up</a>
-                    </nav>
-                </div>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Top Infinity", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-        </header>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Acasă", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Activitatea", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contacte", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Produse", "Produse", "Product")</li>
+                    <li class="account">@Html.ActionLink("Logare", "LogIn", "LogIn")</li>
+                    <li>@Html.ActionLink("Inregistrare", "Register", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="fundal">
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <!--    <footer>
+                <p>&copy; @DateTime.Now.Year - Top Infinity Company</p>
+            </footer>
+            -->
+        </div>
     </div>
 
-
-    <div class="intro">
-        @RenderBody()
-    </div>
-
-    <!-- Section for main scripts render -->
-    @Scripts.Render("~/bundles/jquery/js")
-    @Scripts.Render("~/bundles/bootstrap/js")
-  
-
-
-
-
-
-
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 </body>
-    
 </html>

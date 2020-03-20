@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eUseControl.BusinessLogic.Core
+namespace Top_Infinity.BusinessLogic.Core
 {
-    public class UserApi
+    class UserApi
     {
     }
 }
