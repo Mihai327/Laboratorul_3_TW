@@ -25,11 +25,12 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Acasă", "Index", "Home")</li>
                     <li>@Html.ActionLink("Activitatea", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contacte", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Contacte", "Contacts", "Home")</li>
                     <li>@Html.ActionLink("Produse", "Produse", "Product")</li>
-                    <li class="account">@Html.ActionLink("Logare", "LogIn", "LogIn")</li>
-                    <li>@Html.ActionLink("Inregistrare", "Register", "Home")</li>
+                  @*<li class="account">@Html.ActionLink("Logare", "LogIn", "UserAccount")</li>
+                    <li>@Html.ActionLink("Inregistrare", "Register", "UserAccount")</li>*@
                 </ul>
+                @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
@@ -41,7 +42,7 @@
                 <p>&copy; @DateTime.Now.Year - Top Infinity Company</p>
             </footer>
             -->
-        </div>
+</div>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

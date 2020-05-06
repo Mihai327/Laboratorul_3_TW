@@ -22,13 +22,13 @@ namespace eUseControl.Web
             routes.MapRoute(
                name: "SignUp",
                url: "{controller}/{action}",
-               defaults: new { controller = "Home", action = "SignUp" }
+               defaults: new { controller = "Login", action = "SignUp" }
            );
 
             routes.MapRoute(
                name: "CreateAcount",
                url: "{controller}/{action}",
-               defaults: new { controller = "Home", action = "CreateAcount" }
+               defaults: new { controller = "UserAccount", action = "Register" }
            );
 
             routes.MapRoute(

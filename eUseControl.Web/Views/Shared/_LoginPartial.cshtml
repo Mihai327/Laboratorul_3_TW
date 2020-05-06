@@ -1,0 +1,23 @@
+﻿@if (Session["EmailAdress"] == null)
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            @Html.ActionLink("Logare", "LogIn", "UserAccount")
+        </li>
+        <li>
+            @Html.ActionLink("Înregistrare", "Register", "UserAccount")
+        </li>
+    </ul>
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            @Html.ActionLink("" + Session["EmailAdress"], "Index", "Home")
+        </li>
+        <li>
+            @Html.ActionLink("Ieșire", "LogOut", "UserAccount")
+        </li>
+    </ul>
+}
+

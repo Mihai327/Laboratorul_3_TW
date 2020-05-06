@@ -8147,7 +8147,7 @@ button.close {
 }
 
     .btn-default:hover {
-        background-image: linear-gradient(#636565, #3d3f3f 50%, #333434);
+        background-image: linear-gradient(#ff751a, #803300 50%, #ff751a);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff636565', endColorstr='#ff333434', GradientType=0);
         background-repeat: no-repeat;
         -webkit-filter: none;
@@ -8156,12 +8156,12 @@ button.close {
     }
 
 .btn-primary {
-    background-image: linear-gradient(#6d94bf, #446e9b 50%, #3e648d);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6d94bf', endColorstr='#ff3e648d', GradientType=0);
+    background-image: linear-gradient(#ff751a, #803300 50%, #ff751a);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#803300', endColorstr='#ff751a', GradientType=0);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
-    border: 1px solid #345578;
+    border: 1px solid #5f8ab9;
 }
 
     .btn-primary:hover {
