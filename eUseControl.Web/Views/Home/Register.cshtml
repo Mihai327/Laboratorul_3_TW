@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="intro">
+    <div class="registration-form">
+        <h1>Creațivă un cont</h1>
+        <form action="">
+            <input type="text" class="input-box" placeholder="Familia">
+            <input type="text" class="input-box" placeholder="Numele">
+            <input type="email" class="input-box" placeholder="Adresa electronică">
+            <input type="password" class="input-box" placeholder="Introduceți parola">
+            <input type="password" class="input-box" placeholder="Confirmați parola">
+            <div>
+                <input type="radio" id="male" name="genul"><label for="male">Masculin</label>
+                <input type="radio" id="female" name="genul"><label for="female">Feminin</label>
+            </div>
+            <button type="button" class="signup-btn">Crează cont</button>
+            <p>Aveți deja un cont creat? <a href="@Url.Action("LogIn","Login")">Logațivă</a></p>
+        </form>
+    </div>
+</div>
+
+

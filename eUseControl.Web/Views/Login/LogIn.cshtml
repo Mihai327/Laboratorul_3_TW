@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "LogIn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="intro">
+    <div class="sign-up-form">
+        <img src="~/Assets/images/user-icon.jpg">
+        <h1> Logațivă </h1>
+        <form action="">
+            <input type="email" class="input-box" placeholder="Adresa electronică">
+            <input type="password" class="input-box" placeholder="Parola">
+            <p><span><input type="checkbox"></span>Sunt de accord cu condițiile de utilizare</p>
+            <button type="button" class="signup-btn">Logare</button>
+            <hr>
+            <p class="or">Sau</p>
+            <button type="button" class="signup-btn">Logare cu Facebook</button>
+            <p>Creațivă un cont acum! <a href="@Url.Action("Register","Home")">Crează</a></p>
+        </form>
+    </div>
+</div>
+
