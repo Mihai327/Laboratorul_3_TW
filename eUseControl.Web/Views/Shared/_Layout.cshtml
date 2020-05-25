@@ -1,4 +1,5 @@
 ﻿@using System.Web.Optimization
+@using Microsoft.AspNet.Identity
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,13 +25,9 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Acasă", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Activitatea", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contacte", "Contacts", "Home")</li>
-                    <li>@Html.ActionLink("Produse", "Produse", "Product")</li>
-                  @*<li class="account">@Html.ActionLink("Logare", "LogIn", "UserAccount")</li>
-                    <li>@Html.ActionLink("Inregistrare", "Register", "UserAccount")</li>*@
+                    <li>@Html.ActionLink("Activitatea", "About", "Home")</li>                   
                 </ul>
-                @Html.Partial("_LoginPartial")
+                  @Html.Partial("_LoginPartial") 
             </div>
         </div>
     </div>
@@ -42,7 +39,7 @@
                 <p>&copy; @DateTime.Now.Year - Top Infinity Company</p>
             </footer>
             -->
-</div>
+        </div>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

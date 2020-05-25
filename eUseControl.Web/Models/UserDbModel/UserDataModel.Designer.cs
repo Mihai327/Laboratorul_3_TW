@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\Universitate\Anul 2\Semestrul_ll\Tehnologii_Web\Laboratoare\Lab_1\eUseControl\eUseControl.Web\Models\UserDbModel\DbModel.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Universitate\Anul 2\Semestrul_ll\Tehnologii_Web\Laboratoare\Lab_1\eUseControl\eUseControl.Web\Models\UserDbModel\UserDataModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

@@ -1,4 +1,5 @@
-﻿@if (Session["EmailAdress"] == null)
+﻿@* If user is not authenticated on site *@
+@if (Session["EmailAdress"] == null)
 {
     <ul class="nav navbar-nav navbar-right">
         <li>
@@ -8,12 +9,25 @@
             @Html.ActionLink("Înregistrare", "Register", "UserAccount")
         </li>
     </ul>
+
+
 }
+@* If user authenticated on site *@
 else
 {
+    <ul class="nav navbar-nav">
+        <li>@Html.ActionLink("Contacte", "Contacts", "Home")</li>
+        <li>@Html.ActionLink("Produse", "Products", "Home")</li>
+    </ul>
+    if (User.IsInRole("Admin"))
+    {
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Lista Utilizatorilor", "getUserList", "Home")</li>
+        </ul>
+    }
     <ul class="nav navbar-nav navbar-right">
         <li>
-            @Html.ActionLink("" + Session["EmailAdress"], "Index", "Home")
+            @Html.ActionLink("Salut! " + Session["EmailAdress"], "Index", "Home")
         </li>
         <li>
             @Html.ActionLink("Ieșire", "LogOut", "UserAccount")

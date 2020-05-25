@@ -13,10 +13,10 @@ namespace eUseControl.Web.Models.UserDbModel
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DataBase_TopInfinityEntities1 : DbContext
+    public partial class UserDBContext : DbContext
     {
-        public DataBase_TopInfinityEntities1()
-            : base("name=DataBase_TopInfinityEntities1")
+        public UserDBContext()
+            : base("name=UserDBContext")
         {
         }
     
@@ -25,6 +25,8 @@ namespace eUseControl.Web.Models.UserDbModel
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Role1> Roles1 { get; set; }
+        public virtual DbSet<UserRoleMapping> UserRoleMappings { get; set; }
+        public virtual DbSet<User11> User11 { get; set; }
     }
 }

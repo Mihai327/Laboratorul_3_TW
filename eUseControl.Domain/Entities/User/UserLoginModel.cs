@@ -13,7 +13,7 @@ namespace eUseControl.Web.Models
 
         [Required(ErrorMessage = "*Introduceți Username-ul!")]
         public string Username { get; set; }
-
+       
         [Required(ErrorMessage = "*Introduceți parola!")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
