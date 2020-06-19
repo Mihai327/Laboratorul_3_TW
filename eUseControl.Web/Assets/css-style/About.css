@@ -1,0 +1,62 @@
+﻿.titlul_paginii_about {
+    text-align: center;
+    padding-top: 30px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.about_paragraf_1 {
+    padding-left: 20px;
+    padding-top: 15px;
+}
+
+.about_paragraf_2 {
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/****************************/
+.obiecte_gallery_titlu {
+    margin-left: 20px;
+    padding-top: 10px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+}
+.obiecte_gallery_titlu_2 {
+    padding-top: 14px;
+    margin-left: 10px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.obiecte_gallery {
+    margin: 5px 5px;
+    border: 2px solid #b35900;
+}
+
+.obiecte_gallery img {
+    transition: 1s;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border: 2px solid wheat;
+}
+
+.obiecte_gallery img:hover {
+    filter: brightness(200%);
+    filter: contrast(150%);
+    transform:scale(1.1);
+}
+
+.obiecte_image_size {
+    width: 176px;
+    height: 176px;
+}
+/**********************************/

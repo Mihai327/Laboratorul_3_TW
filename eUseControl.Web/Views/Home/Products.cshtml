@@ -5,29 +5,38 @@
     ViewBag.Title = "Produse";
 }
 
-@*
-  <div class="table-form">
-        <h1>Alege produse Top Infinity - alege calitate înaltă</h1>
-        <div class="table">
-            <table class="table table-bordered">
-                <tbody>
-                    @using (Html.BeginForm("Products", "Home", FormMethod.Post, new { autocomplete = "off" }))
-                    {
-                        foreach (var prod in Model.Products)
-                        {
-                            <tr>
-                                <td><button type="button" class="product-button">@prod</button></td>
-                                
-                            </tr>
-                        }
-                    }
-                </tbody>
-            </table>
-        </div>
+
+<div class="fundal_produse">
+    <h1 class="titlul_paginii_produse">Alege cele mai calitative produse!</h1>
+
+    <div class="products_content_box">
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                        <div class="dropbtn_1">
+                            Piatră naturală flexibilă
+                           
+                           
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="dropdown_produse_2">
+                            <button onclick="myFunction()" class="dropbtn_2">Produse pentru aplicarea manufacturilor</button>
+                            <div id="myDropdown" class="dropdown-content_produse_2">
+                                <a class="produs" href="#">Grund universal</a>
+                                <a class="produs" href="#">Grund extra</a>
+                                <a class="produs" href="#">Grund hidrofobizant</a>
+                                <a class="produs" href="#">Clei acrilic</a>
+                                <a class="produs" href="#">Lac acrilic</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </thead>
+            
+        </table>
     </div>
-*@
-<div class="fundal2">
-    <h2>@ViewBag.Title.</h2>
-    <h3>@ViewBag.Message</h3>
-    <p>Use this area to provide additional information.</p>
 </div>

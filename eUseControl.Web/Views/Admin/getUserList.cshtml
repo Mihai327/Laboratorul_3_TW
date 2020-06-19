@@ -1,0 +1,68 @@
+﻿@model List<eUseControl.Web.Models.UserDbModel.User11>
+@{
+    ViewBag.Title = "Lista tilizatorilor";
+}
+    <div class="admin-background">
+        @Html.Partial("_PartialDashboard")
+        <h2 class="nume-tabela">Lista utilizatorilor</h2>
+
+        <p>
+            <img src="~/Assets/images/pictograme/client.png" /> <a href="@Url.Action("Add_User", "Admin")" class="add-user-btn">Adaugă un utilizator</a>
+        </p>
+        <div class="perimetru-tabela">
+            <table class="table">
+                <thead class="top_tabela">
+                    <tr>
+                        <th>
+                            Numele
+                        </th>
+                        <th>
+                            Prenumele
+                        </th>
+                        <th>
+                            Adresa electronică
+                        </th>
+                        <th>
+                            Username-ul
+                        </th>
+                        @*
+                        <th>
+                            @Html.DisplayNameFor(model => model.Password)
+                        </th>
+                        *@
+                        <th>Opțiuni de modificare a datelor</th>
+                    </tr>
+                </thead>
+
+
+                @for (int i = 0; i < Model.Count(); i++)
+                {
+                    <tr>
+                        <td>
+                            @Model[i].FirstName
+                        </td>
+                        <td>
+                            @Model[i].LastName
+                        </td>
+                        <td>
+                            @Model[i].EmailAdress
+                        </td>
+                        <td>
+                            @Model[i].Username
+                        </td>
+                        @*
+                        <th>
+                            @Html.DisplayNameFor(model => model.Password)
+                        </th>
+                        *@
+                        <td>
+                            <a class="add-user-btn" href="@Url.Action("Edit_User", "Admin", new { id = Model[i].Id})">Editează</a> |
+                            <a class="add-user-btn" href="@Url.Action("Datails_User", "Admin", new { id = Model[i].Id})">Detalii</a> |
+                            <a class="add-user-btn" href="@Url.Action("Delete_User", new { id = Model[i].Id})">Șterge</a>
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>

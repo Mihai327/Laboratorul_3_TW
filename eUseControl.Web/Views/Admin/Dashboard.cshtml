@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Panoul de control";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Dashboard
+{
+    <div class="fundal-admin">
+
+        <div class="fundal-admin-2">
+            
+        </div>
+        <div id="sidebar">
+            <div class="toggle-btn" onclick="toggleSidebar()" title="Butoane adiționale!">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div>
+                <div class="icon">
+                    <ul>
+                        <li><img src="~/Assets/images/pictograme/home.png" class="acasa_img_text_position"> <a href="@Url.Action("Index", "Home")" class="icon_text">Acasă</a></li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <ul>
+                        <li><img src="~/Assets/images/pictograme/about.png" class="activitate_img_text_position"> <a href="@Url.Action("About", "Home")" class="icon_text">Activitatea</a></li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <ul>
+                        <li><img src="~/Assets/images/pictograme/contacts.png" class="contacte_img_text_position"> <a href="@Url.Action("Contacts", "Home")" class="icon_text">Contacte</a></li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <ul>
+                        <li><img src="~/Assets/images/pictograme/supermarket.png" class="produse_img_text_position">  <a href="@Url.Action("Products", "Home")" class="icon_text">Produse</a></li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <ul>
+                        <li><img src="~/Assets/images/pictograme/customers.png" class="clienti_img_text_position"> <a href="@Url.Action("getUserList", "Admin")" class="icon_text">Clienți</a></li>
+                    </ul>
+                </div>
+                <div class="icon">
+                    <ul>
+                        <li><img src="~/Assets/images/pictograme/notification (1).png" class="notificari_img_text_position"> <a href="@Url.Action("Notifications", "Admin")" class="icon_text">Notificări</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}

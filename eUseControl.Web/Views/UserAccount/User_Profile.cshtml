@@ -1,0 +1,98 @@
+﻿@model IEnumerable<eUseControl.Web.Models.UserDbModel.User11>
+@{
+    ViewBag.Title = "Profilul dumnevoastră";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="user_profile_fundal">
+        @foreach (var item in Model)
+        {
+
+            if (User.Identity.Name == item.Username)
+            {
+
+                <h2 class="user_profil_title">Profilul dumneavoastră!</h2>
+                <p>
+                    <img src="~/Assets/images/pictograme/client.png" /> <a class="add-user-btn" href="@Url.Action("SetUserProfile", "UserAccount", new { id = item.Id})">Editează</a>
+                </p>
+                <div class="perimetru-tabela">
+                    <table class="table">
+                        <thead class="top_tabela">
+                            <tr>
+                                <th class="table_thead_text">
+                                    Numele
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="table_data_text">
+                                @item.FirstName
+                            </td>
+                        </tr>
+
+                        <thead class="top_tabela">
+                            <tr>
+                                <th class="table_thead_text">
+                                    Prenumele
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="table_data_text">
+                                @item.LastName
+                            </td>
+                        </tr>
+
+                        <thead class="top_tabela">
+                            <tr>
+                                <th class="table_thead_text">
+                                    Adresa electronică
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="table_data_text">
+                                @item.EmailAdress
+                            </td>
+                        </tr>
+
+                        <thead class="top_tabela">
+                            <tr>
+                                <th class="table_thead_text">
+                                    Username-ul
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="table_data_text">
+                                @item.Username
+                            </td>
+                        </tr>
+
+                        <thead class="top_tabela">
+                            <tr>
+                                <th class="table_thead_text">
+                                    Parola
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="table_data_text">
+                                <input class="show_password" type="password" value="@item.Password" id="UserPassword">
+                                <input type="checkbox" onclick="myFunction()">Afișează Parola
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </div>
+
+            }
+        }
+
+    </div>
+
+
+
+
+

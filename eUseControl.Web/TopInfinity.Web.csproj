@@ -108,6 +108,12 @@
     <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.4.1\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.4.1\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AspNet.TelemetryCorrelation, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.7\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
     </Reference>
@@ -339,6 +345,9 @@
     </Reference>
     <Reference Include="Microsoft.Owin, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.4.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Owin.Security, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.Security.4.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
@@ -716,15 +725,59 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\css-style\About.css" />
+    <Content Include="Assets\css-style\AdminLayout.css" />
+    <Content Include="Assets\css-style\Contacts.css" />
     <Content Include="Assets\css-style\own_css_style.css" />
+    <Content Include="Assets\css-style\Products.css" />
     <Content Include="Assets\css-style\style.css" />
+    <Content Include="Assets\images\about_page\about1.PNG" />
+    <Content Include="Assets\images\about_page\about10.jpg" />
+    <Content Include="Assets\images\about_page\about11.jpg" />
+    <Content Include="Assets\images\about_page\about12.PNG" />
+    <Content Include="Assets\images\about_page\about13.PNG" />
+    <Content Include="Assets\images\about_page\about14.jpg" />
+    <Content Include="Assets\images\about_page\about15.jpg" />
+    <Content Include="Assets\images\about_page\about16.jpg" />
+    <Content Include="Assets\images\about_page\about17.jpg" />
+    <Content Include="Assets\images\about_page\about18.jpg" />
+    <Content Include="Assets\images\about_page\about19.jpg" />
+    <Content Include="Assets\images\about_page\about2.PNG" />
+    <Content Include="Assets\images\about_page\about3.PNG" />
+    <Content Include="Assets\images\about_page\about4.PNG" />
+    <Content Include="Assets\images\about_page\about5.PNG" />
+    <Content Include="Assets\images\about_page\about6.PNG" />
+    <Content Include="Assets\images\about_page\about7.jpg" />
+    <Content Include="Assets\images\about_page\about8.jpg" />
+    <Content Include="Assets\images\about_page\about9.PNG" />
+    <Content Include="Assets\images\about_page\close.png" />
+    <Content Include="Assets\images\about_page\loading.gif" />
+    <Content Include="Assets\images\about_page\next.png" />
+    <Content Include="Assets\images\about_page\prev.png" />
     <Content Include="Assets\images\fundal.jpg" />
     <Content Include="Assets\images\fundal1.jpg" />
     <Content Include="Assets\images\fundal3.jpg" />
     <Content Include="Assets\images\fundal4.jpg" />
     <Content Include="Assets\images\intro3.jpg" />
+    <Content Include="Assets\images\pictograme\about.png" />
+    <Content Include="Assets\images\pictograme\admin.png" />
+    <Content Include="Assets\images\pictograme\client.png" />
+    <Content Include="Assets\images\pictograme\contacts.png" />
+    <Content Include="Assets\images\pictograme\customers.png" />
+    <Content Include="Assets\images\pictograme\endless.png" />
+    <Content Include="Assets\images\pictograme\home.png" />
+    <Content Include="Assets\images\pictograme\infinity.png" />
+    <Content Include="Assets\images\pictograme\logare.png" />
+    <Content Include="Assets\images\pictograme\login.png" />
+    <Content Include="Assets\images\pictograme\logout.png" />
+    <Content Include="Assets\images\pictograme\notification %281%29.png" />
+    <Content Include="Assets\images\pictograme\register.png" />
+    <Content Include="Assets\images\pictograme\supermarket.png" />
+    <Content Include="Assets\images\pictograme\user.png" />
     <Content Include="Assets\images\TopInfLogo.jpg" />
     <Content Include="Assets\images\user-icon.jpg" />
+    <Content Include="Assets\js-style\AdminLayout_JS.js" />
+    <Content Include="Assets\js-style\Products.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -734,6 +787,10 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\lightbox.css" />
+    <Content Include="Content\lightbox.min.css" />
+    <Content Include="Content\material-dashboard.css" />
+    <Content Include="Content\material-dashboard.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
@@ -747,6 +804,8 @@
       <DependentUpon>UserDataModel.edmx</DependentUpon>
       <LastGenOutput>UserDataModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Scripts\bootstrap-material-design.min.js" />
+    <Content Include="Scripts\bootstrap-notify.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -761,6 +820,7 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Scripts\chartist.min.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
     <Content Include="Scripts\esm\popper.js" />
@@ -783,6 +843,7 @@
     <Content Include="Models\UserDbModel\UserDataModel.edmx.diagram">
       <DependentUpon>UserDataModel.edmx</DependentUpon>
     </Content>
+    <Content Include="Content\material-dashboard.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -791,13 +852,23 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-ui-1.12.1.js" />
     <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.1.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.1.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\lightbox-plus-jquery.js" />
+    <Content Include="Scripts\lightbox-plus-jquery.min.js" />
+    <Content Include="Scripts\lightbox.js" />
+    <Content Include="Scripts\lightbox.min.js" />
+    <Content Include="Scripts\material-dashboard.js" />
+    <Content Include="Scripts\material-dashboard.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\perfect-scrollbar.jquery.min.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\SignalR\SignalR.js" />
     <Content Include="Scripts\src\index.js" />
     <Content Include="Scripts\src\methods\defaults.js" />
     <Content Include="Scripts\src\methods\destroy.js" />
@@ -871,6 +942,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserAccountController.cs" />
     <Compile Include="Global.asax.cs">
@@ -902,6 +974,8 @@
     </Compile>
     <Compile Include="Models\UserDbModel\UserRoleProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignalR\Hubs\MyHub.cs" />
+    <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -929,7 +1003,18 @@
     <Content Include="Views\UserAccount\LogIn.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\UserPage.cshtml" />
-    <Content Include="Views\Home\getUserList.cshtml" />
+    <Content Include="Scripts\material-dashboard.js.map" />
+    <Content Include="Views\Admin\Dashboard.cshtml" />
+    <Content Include="Views\Admin\Notifications.cshtml" />
+    <Content Include="Views\Admin\Edit_User.cshtml" />
+    <Content Include="Views\Admin\Datails_User.cshtml" />
+    <Content Include="Views\Shared\_PartialDashboard.cshtml" />
+    <Content Include="Views\Admin\Add_User.cshtml" />
+    <Content Include="Views\Admin\getUserList.cshtml" />
+    <Content Include="Views\UserAccount\SetUserProfile.cshtml" />
+    <Content Include="Views\UserAccount\User_Profile.cshtml" />
+    <Content Include="Scripts\lightbox-plus-jquery.min.map" />
+    <Content Include="Scripts\lightbox.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -939,7 +1024,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Administration\" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.3.0.0-beta2.20059.3\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />

@@ -1,0 +1,70 @@
+﻿@model eUseControl.Web.Models.UserRegisterModel
+@{
+    ViewBag.Title = "Adăugare Utilizator";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="admin-background">
+    @Html.Partial("_PartialDashboard")
+    <div class="user-edit">
+        <h2 class="nume-tabela-2">Înregistrați un nou utilizator</h2>
+        <div class="add-user-form">
+
+            @using (Html.BeginForm("Register", "UserAccount", FormMethod.Post))
+            {
+                <div class="container">
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.FirstName, new { placeholder = "FirstName", @class = "form-control" })
+                        <div>
+                            @Html.ValidationMessageFor(model => model.FirstName, null, new { @class = "text text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.LastName, new { placeholder = "LastName", @class = "form-control" })
+                        <div>
+                            @Html.ValidationMessageFor(model => model.LastName, null, new { @class = "text text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.EmailAdress, new { placeholder = "EmailAdress", @class = "form-control" })
+                        <div>
+                            @Html.ValidationMessageFor(model => model.EmailAdress, null, new { @class = "text text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.Username, new { placeholder = "Username", @class = "form-control" })
+                        <div>
+                            @Html.ValidationMessageFor(model => model.Username, null, new { @class = "text text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.PasswordFor(model => model.Password, new { placeholder = "Password", @class = "form-control" })
+                        <div>
+                            @Html.ValidationMessageFor(model => model.Password, null, new { @class = "text text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.PasswordFor(model => model.ConfirmPassword, new { placeholder = "ConfirmPassword", @class = "form-control" })
+                        <div>
+                            @Html.ValidationMessageFor(model => model.ConfirmPassword, null, new { @class = "text text-danger" })
+                        </div>
+                    </div>
+
+                    <div>
+                        @Html.ValidationMessage("Error", null, new { @class = "text text-danger" })
+                    </div>
+
+                    <div class="add-user-submit">
+                        <input type="submit" value="Înregistrează" class="register-form-btn" />
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+

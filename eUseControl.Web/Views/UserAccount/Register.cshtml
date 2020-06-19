@@ -4,89 +4,68 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!--
 <div class="intro">
-    <div class="registration-form">
-        <h1>Creațivă un cont</h1>
-        <form action="">
-            <input type="text" class="input-box" placeholder="Familia">
-            <input type="text" class="input-box" placeholder="Numele">
-            <input type="email" class="input-box" placeholder="Adresa electronică">
-            <input type="text" class="input-box" placeholder="Username">
-            <input type="password" class="input-box" placeholder="Introduceți parola">
-            <input type="password" class="input-box" placeholder="Confirmați parola">
-            <div>
-                <input type="radio" id="male" name="genul"><label for="male">Masculin</label>
-                <input type="radio" id="female" name="genul"><label for="female">Feminin</label>
-            </div>
-            <button type="button" class="signup-btn">Crează cont</button>
-            <p>Aveți deja un cont creat? <a href="@Url.Action("LogIn","UserAccount")">Logațivă</a></p>
-        </form>
-    </div>
-</div>  -->
-
-<div class="intro">
-    <div class="registration-form">
-        <h1>Creațivă un cont</h1>
+    <div class="sign-up-form_2">
+        <img class="register-image" src="~/Assets/images/pictograme/register.png">
+        <h1>Creați-vă un cont</h1>
         @using (Html.BeginForm("Register", "UserAccount", FormMethod.Post))
         {
             <form action="">
-                <div class="form-group">
-                    @Html.TextBoxFor(model => model.FirstName, new { placeholder = "FirstName" })
-                    <div>
-                        @Html.ValidationMessageFor(model => model.FirstName, null, new { @class = "text text-danger"})
+                <div class="form_group_2_box">
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.FirstName, new { placeholder = "FirstName", @class = "form-control" })
+                        <div>
+                            @Html.ValidationMessageFor(model => model.FirstName, null, new { @class = "text text-danger" })
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    @Html.TextBoxFor(model => model.LastName, new { placeholder = "LastName" })
-                    <div>
-                        @Html.ValidationMessageFor(model => model.LastName, null, new { @class = "text text-danger" })
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.LastName, new { placeholder = "LastName", @class = "form-control" })
+                        <div>
+                            @Html.ValidationMessageFor(model => model.LastName, null, new { @class = "text text-danger" })
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    @Html.TextBoxFor(model => model.EmailAdress, new { placeholder = "EmailAdress" })
-                    <div>
-                        @Html.ValidationMessageFor(model => model.EmailAdress, null, new { @class = "text text-danger" })                     
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.EmailAdress, new { placeholder = "EmailAdress", @class = "form-control" })
+                        <div>
+                            @Html.ValidationMessageFor(model => model.EmailAdress, null, new { @class = "text text-danger" })
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    @Html.TextBoxFor(model => model.Username, new { placeholder = "Username" })
-                    <div>
-                        @Html.ValidationMessageFor(model => model.Username, null, new { @class = "text text-danger" })                       
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.Username, new { placeholder = "Username", @class = "form-control" })
+                        <div>
+                            @Html.ValidationMessageFor(model => model.Username, null, new { @class = "text text-danger" })
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    @Html.PasswordFor(model => model.Password, new { placeholder = "Password" })
-                    <div>
-                        @Html.ValidationMessageFor(model => model.Password, null, new { @class = "text text-danger" })                      
+                    <div class="form-group">
+                        @Html.PasswordFor(model => model.Password, new { placeholder = "Password", @class = "form-control" })
+                        <div>
+                            @Html.ValidationMessageFor(model => model.Password, null, new { @class = "text text-danger" })
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    @Html.PasswordFor(model => model.ConfirmPassword, new { placeholder = "ConfirmPassword" })
-                    <div>
-                        @Html.ValidationMessageFor(model => model.ConfirmPassword, null, new { @class = "text text-danger" })
+                    <div class="form-group">
+                        @Html.PasswordFor(model => model.ConfirmPassword, new { placeholder = "ConfirmPassword", @class = "form-control" })
+                        <div>
+                            @Html.ValidationMessageFor(model => model.ConfirmPassword, null, new { @class = "text text-danger" })
+                        </div>
                     </div>
                 </div>
-          
+                
+
                 <div>
                     @Html.ValidationMessage("Error", null, new { @class = "text text-danger" })
                 </div>
 
                 <div>
-                    <input type="submit" value="Crează contul" class="btn btn-primary btn-lg" />
+                    <input type="submit" value="Crează contul" class="register-form-btn" />
                 </div>
 
-                <p>Aveți deja un cont creat? <a href="@Url.Action("LogIn","UserAccount")">Logațivă</a></p>
+                <p class="register-question">Aveți deja un cont creat? <a href="@Url.Action("LogIn","UserAccount")" class="register-question-btn">Logați-vă</a></p>
             </form>
-
-          
-
         }
     </div>
 </div>
-

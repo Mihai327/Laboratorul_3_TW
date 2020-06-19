@@ -16,28 +16,21 @@ namespace Top_Infinity.Controllers
         {
             return View();
         }
+         
 
-        [Authorize(Roles = "Admin")]
-        public ActionResult getUserList()
-        {
-            var user = db.User11.ToList();
-            return View(user);
-        }
-
-        [Authorize(Roles = "Admin,Utilizator")]
         public ActionResult About()
         {
             return View();
         }
 
-        [Authorize(Roles = "Admin,Utilizator")]
+       
         public ActionResult Contacts()
         {
             ViewBag.Message = "Your contact page.";
             return View();
         }
 
-        [Authorize(Roles = "Admin,Utilizator")]
+        
         public ActionResult Products()
         {
             ViewBag.Message = "Your products page.";

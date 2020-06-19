@@ -1,6 +1,15 @@
 ﻿@* If user is not authenticated on site *@
-@if (Session["EmailAdress"] == null)
+@if (Session["Username"] == null)
 {
+    <ul class="nav navbar-nav">
+
+       @* <li>@Html.ActionLink("Acasă", "Index", "Home")</li> *@
+        <li>@Html.ActionLink("Activitatea", "About", "Home")</li>
+        <li>@Html.ActionLink("Produse", "Products", "Home")</li>
+        <li>@Html.ActionLink("Contacte", "Contacts", "Home")</li>
+
+    </ul>
+
     <ul class="nav navbar-nav navbar-right">
         <li>
             @Html.ActionLink("Logare", "LogIn", "UserAccount")
@@ -12,26 +21,88 @@
 
 
 }
-@* If user authenticated on site *@
+@* If user is authenticated on site *@
 else
 {
-    <ul class="nav navbar-nav">
-        <li>@Html.ActionLink("Contacte", "Contacts", "Home")</li>
-        <li>@Html.ActionLink("Produse", "Products", "Home")</li>
-    </ul>
     if (User.IsInRole("Admin"))
     {
         <ul class="nav navbar-nav">
-            <li>@Html.ActionLink("Lista Utilizatorilor", "getUserList", "Home")</li>
+            <li class="navbar_btn_style">@Html.ActionLink("Panoul de control", "Dashboard", "Admin")</li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="profil-btn">
+                <div class="profil_dropdown">
+                    <button class="profi_dropdown_btn" title="Merge-ți la pagina principală!">@Html.ActionLink("Salut! " + Session["Username"], "Index", "Home")</button>
+                    <div class="profil_dropdown-content">
+                        <div class="profi_dropdown_btn_icon">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img class="profi_dropdown_btn_icon_style" src="~/Assets/images/pictograme/client.png" alt="Pictograma Profil-button" />
+                                        
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("User_Profile", "UserAccount")" class="profi_dropdown_btn_list">Profil</a>
+                                    </td>
+                                </tr>
+                             @* <tr>
+                                    <td>
+                                        <img class="profi_dropdown_btn_icon_style" src="~/Assets/images/pictograme/admin.png" alt="Pictograma Profil-setari" />
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("User_Profile", "UserAccount")" class="profi_dropdown_btn_list">Setări</a>
+                                    </td>
+                                </tr> *@
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li title="Încheiați sesiunea!"> @Html.ActionLink("Ieșire", "LogOut", "UserAccount") </li>
+        </ul>
+        
+    }
+    else if(User.Identity.IsAuthenticated) // if (User.IsInRole("Utilizator")) 
+    {
+        <ul class="nav navbar-nav">
+
+          @*  <li>@Html.ActionLink("Acasă", "Index", "Home")</li> *@
+            <li>@Html.ActionLink("Activitatea", "About", "Home")</li>
+            <li>@Html.ActionLink("Produse", "Products", "Home")</li>
+            <li>@Html.ActionLink("Contacte", "Contacts", "Home")</li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="profil-btn">
+                <div class="profil_dropdown">
+                    <button class="profi_dropdown_btn" title="Merge-ți la pagina principală!">@Html.ActionLink("Salut! " + Session["Username"], "Index", "Home")</button>
+                    <div class="profil_dropdown-content">
+                        <div class="profi_dropdown_btn_icon">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img class="profi_dropdown_btn_icon_style" src="~/Assets/images/pictograme/client.png" alt="Pictograma Profil-button" />
+
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("User_Profile", "UserAccount")" class="profi_dropdown_btn_list">Profil</a>
+                                    </td>
+                                </tr>
+                                @* <tr>
+                                <td>
+                                    <img class="profi_dropdown_btn_icon_style" src="~/Assets/images/pictograme/admin.png" alt="Pictograma Profil-setari" />
+                                </td>
+                                <td>
+                                    <a href="@Url.Action("User_Profile", "UserAccount")" class="profi_dropdown_btn_list">Setări</a>
+                                </td>
+                            </tr> *@
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li title="Încheiați sesiunea!"> @Html.ActionLink("Ieșire", "LogOut", "UserAccount") </li>
         </ul>
     }
-    <ul class="nav navbar-nav navbar-right">
-        <li>
-            @Html.ActionLink("Salut! " + Session["EmailAdress"], "Index", "Home")
-        </li>
-        <li>
-            @Html.ActionLink("Ieșire", "LogOut", "UserAccount")
-        </li>
-    </ul>
 }
 

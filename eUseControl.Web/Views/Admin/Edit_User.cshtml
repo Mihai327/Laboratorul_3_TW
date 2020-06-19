@@ -1,0 +1,45 @@
+﻿@model eUseControl.Web.Models.UserDbModel.User11
+@{
+    ViewBag.Title = "Editare Utilizator";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="admin-background">
+            @Html.Partial("_PartialDashboard")
+        <div class="user-edit">
+            <h2 class="nume-tabela-2">Editați utilizatorul selectat</h2>
+            <div class="edit-user-titlu">
+                @using (Html.BeginForm())
+                {
+                    <div class="container">
+                        <div class="form-group">
+                            <label class="credentials-style">Numele</label>
+                            @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <label class="credentials-style">Prenumele</label>
+                            @Html.TextBoxFor(x => x.LastName, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <label class="credentials-style">Adresa electronică</label>
+                            @Html.TextBoxFor(x => x.EmailAdress, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <label class="credentials-style">Username-ul</label>
+                            @Html.TextBoxFor(x => x.Username, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <label class="credentials-style">Parola nouă</label>
+                            @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+                        </div>
+                        <div>
+                            @Html.ValidationMessage("Error", null, new { @class = "text text-danger" })
+                        </div>
+                        <div class="label-edit">
+                            <input type="submit" value="Salvează modificările" class="add-user-form-btn" />
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+

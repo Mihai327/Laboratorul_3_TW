@@ -85,7 +85,7 @@ namespace eUseControl.Web.Controllers
                     }
                     else
                     {
-                        Session["EmailAdress"] = objUserLoginModel.EmailAdress;
+                        Session["Username"] = objUserLoginModel.Username;
                         return RedirectToAction("Index", "Home");
                     }
                     
@@ -101,6 +101,18 @@ namespace eUseControl.Web.Controllers
             Session.Abandon();
             return RedirectToAction("Index", "Home");
         }
-        
+
+        public ActionResult User_Profile()
+        {
+            var user = UserDBContext.User11.ToList();
+            return View(user);
+        }
+
+        public ActionResult SetUserProfile(int id)
+        {
+            var user = UserDBContext.User11.Where(x => x.Id == id).First();
+            return View(user);
+        }
+
     }
 }
